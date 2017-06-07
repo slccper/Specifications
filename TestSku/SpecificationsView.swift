@@ -90,7 +90,6 @@ class SpecificationsView: UIView {
         bgView.addSubview(tbView)
         bgView.addSubview(sureBtn)
         
-//        bgView.frame = CGRect(x:0,y:SCREEN_HEIGHT,width: SCREEN_WIDTH,height:StandardHeight)
         bgView.snp.makeConstraints { (make) in
             make.height.equalTo(0)
             make.leading.trailing.equalTo(0)
