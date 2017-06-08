@@ -91,9 +91,9 @@ class SpecificationsView: UIView {
         bgView.addSubview(sureBtn)
         
         bgView.snp.makeConstraints { (make) in
-            make.height.equalTo(0)
+            make.height.equalTo(StandardHeight)
             make.leading.trailing.equalTo(0)
-            make.bottom.equalTo(snp.bottom)
+            make.bottom.equalTo(snp.bottom).offset(self.StandardHeight)
         }
         titleLb.snp.makeConstraints { (make) in
             make.top.equalTo(12)
@@ -139,6 +139,7 @@ class SpecificationsView: UIView {
             temp["canSelect"] = selects
             return temp
         })
+        self.layoutIfNeeded()
     }
     
     required init?(coder aDecoder: NSCoder) {
